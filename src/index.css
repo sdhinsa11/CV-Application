@@ -1,0 +1,18 @@
+*{
+    margin: 0px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 3rem;
+    background-color: #deb887;
+    width: 100%;
+    padding: 1rem;
+}
+
+img{
+    padding-right: 6rem;
+}
+
+
