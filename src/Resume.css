@@ -1,0 +1,16 @@
+.Resume{
+    width: 60%;
+    background-color: white;
+
+    margin: 1em;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form{
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+}

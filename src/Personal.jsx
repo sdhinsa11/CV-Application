@@ -5,7 +5,7 @@ import './Personal.css'
 function PersonalSection() {
     return (
         <>
-            <form>
+            <form className="personal">
                 <h2>Personal Information</h2>
                 <label htmlFor="fname">Name:</label>
                 <br />
