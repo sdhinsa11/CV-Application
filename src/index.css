@@ -1,6 +1,9 @@
+/* Heading Styles  */
+
 *{
     margin: 0px;
 }
+
 
 header{
     display: flex;
@@ -15,12 +18,5 @@ img{
     padding-right: 6rem;
 }
 
-.form{
-    display:flex;
-}
-
-.personal{
-    background-color: aqua;
-}
 
 

@@ -1,12 +1,16 @@
 import { useState } from 'react'
 
-import './Personal.css'
+import './experience.css'
 
 function ExperienceSection() {
     return (
         <>
             <form className="experience">
-                <h2>Experience</h2>
+                
+                <div className='top-part'>
+                    <h2 className='header'>Experience</h2>
+                    <button className="expand">+</button>
+                </div>
                 <label htmlFor="companyName">Company Name</label>
                 <br />
                 <input type="text" id="companyName" name="companyName" placeholder="" />

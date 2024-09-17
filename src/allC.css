@@ -1,11 +1,13 @@
-body{
+/* body{
     height: 100vh;
-}
+} */
 
 .container{
     display:flex;
     background-color: blueviolet;
     margin: 1rem;
+    height: auto;
+    overflow-y: auto;
 
 }
 
@@ -13,4 +15,5 @@ body{
     flex-direction: column;
     width: 40%;
     height: 100vh;
+    margin: 1rem;
 }

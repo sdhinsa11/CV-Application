@@ -1,12 +1,15 @@
 import { useState } from 'react'
 
-import './Personal.css'
+import './education.css'
 
 function EducationSection() {
     return (
         <>
             <form className="education">
-                <h2>Education</h2>
+                <div className='top-part'>
+                    <h2 className='header'>Education</h2>
+                    <button className="expand">+</button>
+                </div>
                 <label htmlFor="schoolN">School Name</label>
                 <br />
                 <input type="text" id="schoolName" name="schoolName" placeholder="" />

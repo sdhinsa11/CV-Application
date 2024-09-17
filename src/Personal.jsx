@@ -6,7 +6,10 @@ function PersonalSection() {
     return (
         <>
             <form className="personal">
-                <h2>Personal Information</h2>
+                <div className='top-part'>
+                    <h2 className='header'>Personal Information</h2>
+                    <button className="expand">+</button>
+                </div>
                 <label htmlFor="fname">Name:</label>
                 <br />
                 <input type="text" id="fname" name="fname" placeholder="Sohana Dhinsa" />
