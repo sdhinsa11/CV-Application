@@ -10,8 +10,37 @@
 
 }
 
-.form{
+/* .form{
     margin: 1em;
     display: flex;
     flex-direction: column;
+} */
+
+.pers{
+    /* border: 2px solid blue; */
+    margin: 1em;
+}
+
+h2{
+    text-align: center;
+}
+
+.Information{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+hr{
+    height: 1px;
+    background-color: black;
+    width: auto;
+
+}
+
+.verticalLine {
+    width: 0.5px; /* Thickness of the line */
+    height: 30px; /* Adjust the height as needed */
+    background-color: black; /* Color of the line */
+    margin: 0 10px; /* Adds some space on both sides */
 }
