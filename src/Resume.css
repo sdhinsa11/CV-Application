@@ -44,3 +44,35 @@ hr{
     background-color: black; /* Color of the line */
     margin: 0 10px; /* Adds some space on both sides */
 }
+
+
+/* Education Section */
+.edu{
+    /* padding: 3em; */
+    display:flex;
+    flex-direction: column;
+    margin: 1em;
+}
+
+.lineOne, .lineTwo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.lineTwo{
+    flex-direction: row-reverse;
+}
+
+.time{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Experience Section  */
+
+.exp{
+    /* padding: 3em; */
+    display:flex;
+    flex-direction: column;
+    margin: 1em;
+}

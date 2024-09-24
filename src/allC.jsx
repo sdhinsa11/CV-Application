@@ -18,6 +18,40 @@ function AllC() {
     const [stime, setsTime] = useState("");
     const [etime, seteTime] = useState("");
     const [loc, setLoc] = useState("");
+
+    // const [workName, setWN] = useState("");
+    // const [pT, setPT] = useState("");
+    // const [stimeW, setsTimeW] = useState("");
+    // const [etimeW, seteTimeW] = useState("");
+    // const [locW, setLocW] = useState("");
+    // const [roleR, setrR] = useState("");
+
+    // State for multiple experiences
+    const [experiences, setExperiences] = useState([
+    { workName: '', pT: '', stimeW: '', etimeW: '', locW: '', roleR: '' }
+    ]);
+
+    const handleExperienceChange = (index, e) => {
+        const { name, value } = e.target;
+        const newExperiences = [...experiences];
+        newExperiences[index][name] = value;
+        setExperiences(newExperiences);
+      };
+
+    // Add a new empty experience form
+    const handleAddExperience = () => {
+        setExperiences([
+            ...experiences,
+            { workName: '', pT: '', stimeW: '', etimeW: '', locW: '', roleR: '' }
+        ]);
+    };
+    
+    const handleRemoveExperience = (index) => {
+        const newExperiences = experiences.filter((_, i) => i !== index);
+        setExperiences(newExperiences);
+      };
+
+
     
     function handleName(e){
         setName(e.target.value);
@@ -52,6 +86,32 @@ function AllC() {
     }
 
 
+    // function handleWN(e){
+    //     setWN(e.target.value);
+    // }
+
+    // function handlepT(e){
+    //     setPT(e.target.value);
+    // }
+
+    // function handlesTimeW(e){
+    //     setsTimeW(e.target.value);
+    // }
+
+    // function handleeTimeW(e){
+    //     seteTimeW(e.target.value);
+    // }
+
+    // function handleLocW(e){
+    //     setLocW(e.target.value);
+    // }
+
+    // function handlerR(e){
+    //     setrR(e.target.value);
+    // }
+
+
+
 
     return (
         <div className='container'>
@@ -73,16 +133,60 @@ function AllC() {
                                     handleLoc={handleLoc}
                                     handlesTime = {handlesTime}
                                     handleeTime = {handleeTime}/>
-                <ExperienceSection />
+                {/* <ExperienceSection workName = {workName}
+                                    pT = {pT}
+                                    stimeW = {stimeW}
+                                    etimeW={etimeW}
+                                    loc={locW}
+                                    roleR={roleR}
+                                    
+                                    handleWN = {handleWN}
+                                    handlepT = {handlepT}
+                                    handlesTimeW= {handlesTimeW}
+                                    handleeTimeW={handleeTimeW}
+                                    handleLoc={handleLocW}
+                                    handleroleR ={handlerR}/> */}
+                
+                {experiences.map((experience, index) => (
+                    <ExperienceSection
+                        key={index}
+                        workName={experience.workName}
+                        pT={experience.pT}
+                        stimeW={experience.stimeW}
+                        etimeW={experience.etimeW}
+                        loc={experience.locW}
+                        roleR={experience.roleR}
+                        handleWN={(e) => handleExperienceChange(index, e)}
+                        handlepT={(e) => handleExperienceChange(index, e)}
+                        handlesTimeW={(e) => handleExperienceChange(index, e)}
+                        handleeTimeW={(e) => handleExperienceChange(index, e)}
+                        handleLoc={(e) => handleExperienceChange(index, e)}
+                        handleroleR={(e) => handleExperienceChange(index, e)}
+                    />
+                ))}
+                <button type="button" onClick={handleAddExperience}>
+                        Add Experience
+                </button>
+                <button type="button" onClick={handleRemoveExperience}>
+                    Delete Experience
+                </button>
             </div>
-            <Resume name={name}
-            email={email} pN = {phoneNumber} 
-            school={schoolName} dT={degreeT} loc={loc}
-            sT={stime} eT={etime}/>
+            <Resume 
+                name={name}
+                email={email} 
+                pN = {phoneNumber} 
+                school={schoolName} 
+                dT={degreeT} 
+                loc={loc}
+                sT={stime} 
+                eT={etime} 
+                experiences={experiences}  
+            />
        
         </div>
-        
-      )
+    );
 }
-
+  
 export default AllC
+
+
